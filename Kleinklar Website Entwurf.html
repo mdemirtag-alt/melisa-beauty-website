@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kleinklar – Mehr Platz im Alltag (Entwurf)</title>
+<meta name="description" content="Kleinklar: Ordnung für kleine Wohnungen. Praktische Ideen für Schubladen, Regale und Alltag. Entwurf.">
+<style>
+:root{--sage:#7C9A84;--dark:#2F4A3A;--cream:#F6F1E7;--paper:#FCFAF5;--line:#E2DACB;--text:#2a3a30;--muted:#5d6e62}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;font-family:"Helvetica Neue",Arial,sans-serif;color:var(--text);background:var(--cream);line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:"Avenir Next","Trebuchet MS",Arial,sans-serif;color:var(--dark);line-height:1.15;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(2.3rem,6vw,4rem)}
+h2{font-size:clamp(1.7rem,3.6vw,2.4rem)}
+h3{font-size:1.2rem}
+p{margin:0 0 1em}
+a{color:var(--dark)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.banner{background:var(--dark);color:var(--cream);text-align:center;font-size:.9rem;padding:9px 14px}
+.banner b{background:var(--cream);color:var(--dark);border-radius:99px;padding:2px 10px;margin-right:8px;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+header{position:sticky;top:0;z-index:10;background:rgba(246,241,231,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 22px;max-width:1080px;margin:0 auto;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:1.25rem;color:var(--dark)}
+.brand img{width:44px;height:44px;border-radius:10px}
+nav{display:flex;gap:4px 18px;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:.95rem;color:var(--muted);padding:4px 0}
+nav a:hover{color:var(--dark)}
+.hero{padding:64px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.eyebrow{display:inline-block;color:var(--dark);background:#e3ebe2;padding:4px 12px;border-radius:99px;font-size:.85rem;font-weight:600;margin-bottom:18px}
+.lead{font-size:1.2rem;color:var(--muted);max-width:34em}
+.btn{display:inline-block;background:var(--dark);color:var(--cream);text-decoration:none;padding:13px 24px;border-radius:12px;font-weight:600;margin:6px 10px 6px 0}
+.btn.alt{background:transparent;color:var(--dark);border:2px solid var(--dark);padding:11px 22px}
+.heroart{background:var(--sage);border-radius:28px;padding:28px;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;box-shadow:0 20px 50px -25px rgba(47,74,58,.6)}
+.heroart img{width:78%;border-radius:22px}
+section{padding:64px 0}
+section.alt{background:var(--paper);border-block:1px solid var(--line)}
+.sub{color:var(--muted);max-width:40em;margin-bottom:34px}
+.grid{display:grid;gap:20px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px}
+section.alt .card{background:var(--cream)}
+.card .ic{width:46px;height:46px;border-radius:12px;background:var(--sage);display:grid;place-items:center;margin-bottom:14px}
+.card .ic svg{width:26px;height:26px;stroke:var(--cream);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card p{color:var(--muted);margin:0}
+.tip{display:flex;gap:16px}
+.num{flex:none;width:38px;height:38px;border-radius:50%;background:var(--dark);color:var(--cream);display:grid;place-items:center;font-weight:700}
+.tip h3{margin-bottom:.25em}
+.quote{background:var(--dark);color:var(--cream);border-radius:24px;padding:42px;text-align:center}
+.quote h2{color:var(--cream);margin:0}
+.quote p{color:#cfdccf;margin:.6em auto 0;max-width:34em}
+.pending{border:2px dashed var(--sage);border-radius:24px;padding:34px;background:var(--paper)}
+.pending .slot{aspect-ratio:4/3;border-radius:16px;background:repeating-linear-gradient(45deg,#ebe5d6,#ebe5d6 12px,#f1ecdf 12px,#f1ecdf 24px);display:grid;place-items:center;color:var(--muted);font-weight:600;text-align:center;padding:14px}
+.pending .cols{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:center}
+.status{display:inline-block;background:#f3e6c4;color:#6b5314;padding:4px 12px;border-radius:99px;font-size:.85rem;font-weight:600;margin-bottom:12px}
+ul.check{list-style:none;padding:0;margin:0 0 1em}
+ul.check li{padding-left:28px;position:relative;margin-bottom:.5em}
+ul.check li:before{content:"";position:absolute;left:0;top:.5em;width:14px;height:8px;border-left:3px solid var(--sage);border-bottom:3px solid var(--sage);transform:rotate(-45deg)}
+details{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:600;color:var(--dark)}
+details p{margin:.7em 0 0;color:var(--muted)}
+footer{background:var(--dark);color:#cfdccf;padding:44px 0;font-size:.95rem}
+footer a{color:var(--cream)}
+footer .cols{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:30px}
+footer h3{color:var(--cream);font-size:1rem}
+@media(max-width:820px){
+ body{font-size:16px}
+ .hero .wrap,.pending .cols,footer .cols{grid-template-columns:1fr}
+ .g3,.g2{grid-template-columns:1fr}
+ .heroart{max-width:340px;margin:0 auto}
+ .hero{padding:36px 0}section{padding:44px 0}
+ .quote,.pending{padding:26px}
+ nav{width:100%;gap:2px 16px}
+}
+</style>
+</head>
+<body>
+<div class="banner"><b>Entwurf</b>Vorschau zur Prüfung – noch keine öffentliche Verkaufsseite, kein Shop, keine Bestellung möglich.</div>
+<header>
+ <div class="bar">
+  <a class="brand" href="#top"><img src="assets/logo.png" alt="Kleinklar Logo"> Kleinklar</a>
+  <nav aria-label="Hauptnavigation">
+   <a href="#marke">Die Marke</a>
+   <a href="#ideen">Ordnungsideen</a>
+   <a href="#sortiment">Sortiment</a>
+   <a href="#fragen">Fragen</a>
+   <a href="#kontakt">Kontakt</a>
+  </nav>
+ </div>
+</header>
+
+<main id="top">
+<div class="hero">
+ <div class="wrap">
+  <div>
+   <span class="eyebrow">Ordnung für kleine Wohnungen</span>
+   <h1>Mehr Platz im Alltag.</h1>
+   <p class="lead">Auch auf wenig Fläche. Kleinklar denkt Ordnung aus Sicht kleiner Wohnungen: passend, ruhig und ohne Umbau.</p>
+   <a class="btn" href="#ideen">Ordnungsideen entdecken</a>
+   <a class="btn alt" href="#sortiment">Zum Sortiment</a>
+  </div>
+  <div class="heroart"><img src="assets/logo.png" alt="Kleinklar Symbol: eine Schublade"></div>
+ </div>
+</div>
+
+<section class="alt" id="marke">
+ <div class="wrap">
+  <h2>Kleinklar in drei Gedanken</h2>
+  <p class="sub">Kleine Wohnung, klarer Kopf. Wer wenig Platz hat, braucht keine Perfektion, sondern Lösungen, die zum eigenen Zuhause passen.</p>
+  <div class="grid g3">
+   <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 12h18M10 15.5h4"/></svg></div><h3>Passend statt Massenware</h3><p>Schubladen, Fächer und Ecken sind selten Standardmaß. Kleinklar denkt Ordnung vom vorhandenen Platz aus.</p></div>
+   <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12h16M4 12l4-4M4 12l4 4M20 12l-4-4M20 12l-4 4"/></svg></div><h3>Flexibel für Mieter</h3><p>Lösungen, die ohne Bohren und Umbau auskommen und bei einem Umzug einfach mitkommen.</p></div>
+   <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg></div><h3>Ruhig und ehrlich</h3><p>Klare Sprache, keine Übertreibung. Wir versprechen nur, was ein Produkt wirklich einlösen kann.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="ideen">
+ <div class="wrap">
+  <h2>Fünf Minuten, sichtbar mehr Ordnung</h2>
+  <p class="sub">Praktische Ideen, die du heute ohne neue Anschaffung ausprobieren kannst. Fang mit einer Schublade an.</p>
+  <div class="grid g2">
+   <div class="card tip"><div class="num">1</div><div><h3>Erst messen, dann sortieren</h3><p>Miss Breite, Tiefe und Höhe deiner Schublade kurz nach. Mit den Maßen findest du später schnell die passende Lösung.</p></div></div>
+   <div class="card tip"><div class="num">2</div><div><h3>Gruppen bilden</h3><p>Lege alles aus der Schublade auf den Tisch und sortiere nach Zweck: täglich, gelegentlich, selten. Das Tägliche kommt nach vorn.</p></div></div>
+   <div class="card tip"><div class="num">3</div><div><h3>Jedes Teil bekommt einen festen Platz</h3><p>Was rutscht, mischt sich. Kleine Fächer, Trenner oder Schachteln geben jedem Gegenstand sein Zuhause.</p></div></div>
+   <div class="card tip"><div class="num">4</div><div><h3>Hochkant statt gestapelt</h3><p>Stehend gelagerte Dinge sieht man auf einen Blick. So musst du nichts mehr umgraben, um an das Untere zu kommen.</p></div></div>
+   <div class="card tip"><div class="num">5</div><div><h3>Den Raum nach oben nutzen</h3><p>Türinnenseiten, Wandflächen über Türen und der Platz unter dem Bett sind in kleinen Wohnungen oft ungenutzt.</p></div></div>
+   <div class="card tip"><div class="num">6</div><div><h3>Weniger Dinge, mehr Luft</h3><p>Frage dich bei jedem Teil, ob du es in den letzten Monaten genutzt hast. Was nicht bleibt, schafft Platz für das, was bleibt.</p></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="alt">
+ <div class="wrap">
+  <div class="quote">
+   <h2>Passt in deine Schublade. Nicht umgekehrt.</h2>
+   <p>Das ist unser Maßstab für alles, was künftig unter dem Namen Kleinklar erscheint.</p>
+  </div>
+ </div>
+</section>
+
+<section id="sortiment">
+ <div class="wrap">
+  <h2>Sortiment</h2>
+  <p class="sub">Hier entsteht der Produktbereich von Kleinklar. Wir zeigen erst Produkte, wenn sie wirklich bestätigt sind.</p>
+  <div class="pending">
+   <div class="cols">
+    <div class="slot">Platz für das erste Kleinklar-Produkt<br>(Produktfoto folgt)</div>
+    <div>
+     <span class="status">In Vorbereitung</span>
+     <h3>Erstes Produkt: Schubladen-Organizer</h3>
+     <p>Der erste Baustein soll ein Organizer für Schubladen werden. Produktdetails, Maße, Preis und Verfügbarkeit stehen noch nicht fest und werden hier erst veröffentlicht, wenn sie geklärt sind.</p>
+     <ul class="check">
+      <li>Produktfoto und Beschreibung folgen nach der Klärung</li>
+      <li>Preis und Liefergebiet werden vor dem Start angegeben</li>
+      <li>Bestellen ist derzeit noch nicht möglich</li>
+     </ul>
+     <p style="color:var(--muted);margin:0">Bis dahin findest du oben praktische Ideen, die ohne Kauf funktionieren.</p>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="alt" id="fragen">
+ <div class="wrap">
+  <h2>Häufige Fragen</h2>
+  <p class="sub">Ehrliche Antworten zum aktuellen Stand.</p>
+  <details><summary>Kann ich schon etwas bestellen?</summary><p>Noch nicht. Diese Seite ist ein Entwurf. Sobald es ein bestätigtes Produkt gibt, erscheinen hier Angaben zu Preis, Lieferung und Bestellung.</p></details>
+  <details><summary>Was ist Kleinklar?</summary><p>Eine Marke für Ordnung in kleinen Wohnungen. Das Versprechen lautet „Mehr Platz im Alltag“.</p></details>
+  <details><summary>Muss ich bohren oder umbauen?</summary><p>Unser Anspruch ist es, Lösungen für Mieter zu zeigen, die ohne Umbau auskommen. Details nennen wir je Produkt.</p></details>
+  <details><summary>Woher weiß ich, ob etwas in meine Schublade passt?</summary><p>Miss die Innenmaße kurz nach. Bei jedem Produkt werden die Maße angegeben, damit du vorab vergleichen kannst.</p></details>
+ </div>
+</section>
+</main>
+
+<footer id="kontakt">
+ <div class="wrap cols">
+  <div>
+   <h3>Kleinklar</h3>
+   <p>Mehr Platz im Alltag.<br>Ordnung für kleine Wohnungen.</p>
+  </div>
+  <div>
+   <h3>Navigation</h3>
+   <p><a href="#marke">Die Marke</a><br><a href="#ideen">Ordnungsideen</a><br><a href="#sortiment">Sortiment</a><br><a href="#fragen">Fragen</a></p>
+  </div>
+  <div>
+   <h3>Kontakt und Rechtliches</h3>
+   <p>Anbieterangaben, Kontakt, Impressum und Datenschutzerklärung folgen vor der Veröffentlichung.</p>
+  </div>
+ </div>
+ <div class="wrap" style="margin-top:28px;font-size:.85rem;opacity:.8">Entwurf zur Prüfung. Alle Angaben vorläufig.</div>
+</footer>
+</body>
+</html>
